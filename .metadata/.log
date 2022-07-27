@@ -1947,3 +1947,527 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.core.expressions 4 201 2022-07-27 15:51:58.451
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragmentRoot
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragmentRoot
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:131)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:104)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:284)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:227)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:219)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:237)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:104)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:145)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:126)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:56)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:228)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:222)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:177)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:258)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:468)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5143)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4775)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2022-07-27 15:51:58.455
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragmentRoot
+!SESSION 2022-07-27 15:56:07.305 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=11.0.13
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-07-27 15:56:30.339
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2022-07-27 15:56:58.804
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-07-27 15:56:58.804
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4664fef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1026a011,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-07-27 15:56:58.804
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63b95a30,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@353aadd7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-27 15:57:05.347
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:07.783
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:07.784
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6ad035b7[org.springframework.tooling.boot.ls:1.33.0.202204250653(id=1448)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:07.798
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:08.061
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-07-27 15:57:10.792
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-07-27 15:57:10.794
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-07-27 15:57:10.813
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\danie'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.jboss.tools.quarkus.lsp4e 4 0 2022-07-27 15:57:12.102
+!MESSAGE RemoteSystemsTempFiles does not exist
+!STACK 1
+Java Model Exception: Error in Java Model (code 969): RemoteSystemsTempFiles does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:584)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.JavaProject.getJavaProjectElementInfo(JavaProject.java:2131)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2867)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2861)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2879)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2871)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1776)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1677)
+	at org.jboss.tools.quarkus.lsp4e.internal.qute.QuteProjectListener.configureProject(QuteProjectListener.java:62)
+	at org.jboss.tools.quarkus.lsp4e.internal.qute.QuteProjectListener.<init>(QuteProjectListener.java:39)
+	at org.jboss.tools.quarkus.lsp4e.internal.startup.qute.QuteStartup.earlyStartup(QuteStartup.java:24)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2667)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2022-07-27 15:57:12.105
+!MESSAGE RemoteSystemsTempFiles does not exist
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:15.695
+!MESSAGE Boot LS startup time from start to initialized: 7876ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.836
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.FMoOwyiBisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.841
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.846
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.847
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.848
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.848
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.FMoOwyiB => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.887
+!MESSAGE classpath=95 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.889
+!MESSAGE buffering callback sts4.classpath.FMoOwyiB bookstore false 95
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:16.890
+!MESSAGE executing callback sts4.classpath.FMoOwyiB 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-27 15:57:17.386
+!MESSAGE executing callback sts4.classpath.FMoOwyiB SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2022-07-27 16:02:16.895
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.core.expressions 4 201 2022-07-27 16:02:16.968
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:131)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:104)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:284)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:227)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:219)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:237)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:104)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:145)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:126)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:56)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:228)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:222)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:177)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:258)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:468)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5143)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4775)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2022-07-27 16:02:16.969
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+
+!ENTRY org.eclipse.core.expressions 4 201 2022-07-27 16:02:23.160
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:131)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:104)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:284)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:227)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:219)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:237)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:104)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:145)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:126)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:56)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:228)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:222)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:177)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:258)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:468)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5143)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4775)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2022-07-27 16:02:23.161
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+
+!ENTRY org.eclipse.core.expressions 4 201 2022-07-27 16:02:31.228
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:131)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:104)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:284)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:227)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:219)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:237)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:104)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:145)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:126)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:56)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:228)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:222)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:177)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:258)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:468)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5143)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4775)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2022-07-27 16:02:31.229
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+
+!ENTRY org.eclipse.core.expressions 4 201 2022-07-27 16:02:37.005
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragment
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragment
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:131)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:104)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:284)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:227)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:219)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:237)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:104)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:145)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:126)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:56)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:228)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:222)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:177)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:258)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:468)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5143)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4775)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2022-07-27 16:02:37.005
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY org.eclipse.core.expressions 4 201 2022-07-27 16:03:17.051
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragment
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragment
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:131)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:104)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.failsEnablement(RegistryPageContributor.java:284)
+	at org.eclipse.ui.internal.dialogs.RegistryPageContributor.isApplicableTo(RegistryPageContributor.java:227)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:219)
+	at org.eclipse.ui.internal.dialogs.PropertyPageContributorManager.getApplicableContributors(PropertyPageContributorManager.java:237)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.hasPropertyPagesFor(PropertyDialogAction.java:104)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:145)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.isApplicableForSelection(PropertyDialogAction.java:126)
+	at org.eclipse.ui.internal.navigator.resources.actions.PropertiesActionProvider.fillContextMenu(PropertiesActionProvider.java:56)
+	at org.eclipse.ui.navigator.NavigatorActionService$2.run(NavigatorActionService.java:228)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.navigator.NavigatorActionService.addCommonActionProviderMenu(NavigatorActionService.java:222)
+	at org.eclipse.ui.navigator.NavigatorActionService.fillContextMenu(NavigatorActionService.java:177)
+	at org.eclipse.ui.navigator.CommonNavigatorManager.fillContextMenu(CommonNavigatorManager.java:258)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:468)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1068)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5143)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4775)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4101)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2022-07-27 16:03:17.051
+!MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.PackageFragment
