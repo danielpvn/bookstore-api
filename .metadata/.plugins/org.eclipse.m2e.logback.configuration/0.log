@@ -378,3 +378,4 @@
 2022-07-27 13:08:09,116 [Worker-22: Import Getting Started Content] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-07-27 13:08:09,117 [Worker-22: Import Getting Started Content] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-07-27 13:08:09,117 [Worker-22: Import Getting Started Content] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\danie\Desktop\cast\estudos\bookstore\src\test\resources
+2022-07-27 13:08:09,930 [Worker-22: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 3 sec
